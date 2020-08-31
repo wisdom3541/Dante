@@ -1,0 +1,70 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dante">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:fontFamily="@font/faxsans"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <activity android:name=".firstpage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".welcome">
+
+        </activity>
+
+        <activity android:name=".createacct">
+
+        </activity>
+
+        <activity android:name=".fragmentsholder">
+
+        </activity>
+
+        <activity android:name=".carddetailspage">
+
+        </activity>
+
+        <activity android:name=".contactus">
+
+        </activity>
+
+        <activity android:name=".changesettings">
+
+        </activity>
+
+        <activity android:name=".thankyoupage">
+
+        </activity>
+
+        <activity android:name=".orderpage">
+
+        </activity>
+
+        <activity android:name=".createdacctpage">
+
+        </activity>
+
+        <activity android:name=".transactionpage">
+
+        </activity>
+
+
+    </application>
+
+</manifest>

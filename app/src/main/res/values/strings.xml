@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Dante</string>
+
+    <string-array name="card_names">
+        <item>Googleplay giftcard</item>
+        <item>iTunes giftcard</item>
+        <item>Offgamers giftcard</item>
+        <item>Amazon giftcard</item>
+        <item>OneVanilla giftcard</item>
+        <item>Steam giftcard</item>
+        <item>Bitcoin giftcard</item>
+
+
+    </string-array>
+
+    <string-array name="transactions">
+        <item>Google play giftcard</item>
+        <item>iTunes giftcard</item>
+        <item>Offgamers giftcard</item>
+        <item>Amazon giftcard</item>
+        <item>OneVanilla giftcard</item>
+        <item>Steam giftcard</item>
+        <item>Bitcoin giftcard</item>
+    </string-array>
+</resources>

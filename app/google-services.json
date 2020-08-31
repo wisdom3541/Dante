@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "556372367766",
+    "firebase_url": "https://dante-cbbae.firebaseio.com",
+    "project_id": "dante-cbbae",
+    "storage_bucket": "dante-cbbae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:556372367766:android:29e65499d402ddebec65b7",
+        "android_client_info": {
+          "package_name": "com.example.dante"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "556372367766-sffpec9knp3vgdgkb8cc7tg3glj5udp5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dante",
+            "certificate_hash": "a1d12471a4efaca0a35128e2f87a272fed771385"
+          }
+        },
+        {
+          "client_id": "556372367766-2sp8ob001rfp37cs7h3m9nii5hia7ck9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbNwaJBtCu0lw6vy-y58UgZglsbUFmyMA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "556372367766-2sp8ob001rfp37cs7h3m9nii5hia7ck9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
