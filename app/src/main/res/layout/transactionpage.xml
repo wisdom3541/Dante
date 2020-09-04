@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,49 +7,40 @@
     android:layout_height="match_parent"
     android:background="@drawable/transactionbackground">
 
-    <ImageView
-        android:id="@+id/backbtn"
-        android:layout_width="79dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="10dp"
-        android:src="@drawable/whitebackbtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    </ImageView>
 
     <TextView
         android:id="@+id/trans"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginTop="65dp"
         android:fontFamily="@font/faxsans"
         android:text="Transaction History"
         android:textColor="#fff"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.244"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backbtn">
+        app:layout_constraintTop_toTopOf="parent">
 
     </TextView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/transactionrecycletrade"
-        android:layout_width="414dp"
-        android:layout_height="564dp"
+        android:layout_width="410dp"
+        android:layout_height="750dp"
         android:paddingBottom="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/trans"
         app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

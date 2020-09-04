@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/background"
     android:background="@drawable/welcome"
+    >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -71,6 +77,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
+        android:inputType="textPassword"
         android:id="@+id/password"
         android:layout_width="300dp"
         android:layout_height="40dp"
@@ -131,3 +138,4 @@
         app:layout_constraintVertical_bias="0.95" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

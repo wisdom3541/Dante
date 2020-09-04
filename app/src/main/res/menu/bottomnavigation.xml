@@ -21,7 +21,7 @@
     <item
         android:id="@+id/settings"
         android:enabled="true"
-        android:icon="@drawable/setting"
+        android:icon="@drawable/settingsicon"
         android:title="Settings"/>
 
 

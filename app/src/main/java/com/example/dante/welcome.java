@@ -1,13 +1,19 @@
 package com.example.dante;
 
+import android.animation.Animator;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
+import android.view.ViewAnimationUtils;
+import android.view.ViewTreeObserver;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -28,6 +34,8 @@ public class welcome extends AppCompatActivity {
     String I;
     String TAG;
 
+    private  View background;
+
     @Override
     public void onStart() {
         super.onStart();
@@ -40,13 +48,18 @@ public class welcome extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.do_not_move, R.anim.do_not_move);
         setContentView(R.layout.welcome);
         mAuth = FirebaseAuth.getInstance();
 
+        background = findViewById(R.id.background);
+
+
+
+        // finding ID
         Emailtext = findViewById(R.id.email);
         Passwordtext = findViewById(R.id.password);
         intent = new Intent(this,createacct.class);
-       // intent2 = new Intent(this,fragmentsholder.class);
         createacct = findViewById(R.id.createacct);
         loginbtn = (ImageView)findViewById(R.id.loginbtn);
 
@@ -139,4 +152,8 @@ public class welcome extends AppCompatActivity {
         Log.e(I, (String) "this" + o);
     }
 
-}
+
+    }
+
+
+

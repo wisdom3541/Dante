@@ -96,6 +96,7 @@
         app:layout_constraintTop_toBottomOf="@+id/lastnametext" />
 
     <EditText
+        android:inputType="textPassword"
         android:id="@+id/passwordtext"
         android:layout_width="260dp"
         android:layout_height="40dp"

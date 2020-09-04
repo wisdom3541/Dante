@@ -35,14 +35,13 @@ public class carddetailspage extends AppCompatActivity {
     Button redeem;
     boolean status;
     Intent intent;
-    String tag, code;
+    String tag, code, firstimagepath, secondimagepath;
     String cards[];
     int imagesss[] = {R.drawable.googlecardimg, R.drawable.itunesimg, R.drawable.offgamersimg, R.drawable.amazonimg, R.drawable.vanillaimg, R.drawable.steamcard, R.drawable.btccard};
     Bitmap bitmap;
-
-    String firstimagepath, secondimagepath;
-    Uri targetUri;
-
+    //array holding images
+    String[] attachFiles = new String[2];
+    Uri targetUri,intentfstimg,intentscdimg;
 
 
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
@@ -60,7 +59,6 @@ public class carddetailspage extends AppCompatActivity {
 
         Intent i = getIntent();
         indexnumber = i.getIntExtra("number", 0);
-
         Log.e(tag, String.valueOf(indexnumber));
 
         firstimg = findViewById(R.id.firstpicture);
@@ -76,6 +74,11 @@ public class carddetailspage extends AppCompatActivity {
 
         verifyStoragePermissions(this);
 
+        //assigns the image and cardname
+        Log.e(tag, String.valueOf(indexnumber));
+        carddetailsimage.setImageResource(imagesss[indexnumber]);
+        cardname.setText(cards[indexnumber]);
+
 
         cardcode.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,9 +90,6 @@ public class carddetailspage extends AppCompatActivity {
         });
 
 
-        Log.e(tag, String.valueOf(indexnumber));
-        carddetailsimage.setImageResource(imagesss[indexnumber]);
-        cardname.setText(cards[indexnumber]);
 
 
         front.setOnClickListener(new View.OnClickListener() {
@@ -119,12 +119,19 @@ public class carddetailspage extends AppCompatActivity {
             }
         });
 
+        //redeem onclicklistener
         redeem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                code = cardcode.getText().toString().trim();
 
-                sendMail();
+                Intent intent2 = new Intent(v.getContext(), accountdetailspage.class);
+                intent2.putExtra("number",indexnumber);
+                intent2.putExtra("cardcode",cardcode.getText().toString().trim());
+                intent2.putExtra("firstcardimage", intentfstimg);
+                intent2.putExtra("secondcardimage",intentscdimg);
+                startActivity(intent2);
+              //  code = cardcode.getText().toString().trim();
+                //sendMail();
             }
         });
     }
@@ -144,22 +151,17 @@ public class carddetailspage extends AppCompatActivity {
     }
 
     private void sendMail() {
-
         String mail = "ezeokoliwisdom@gmail.com";
         String message = code ;
         String subject = Utils.useremail + " " + "card code: " + code;
-        String[] attachFiles = new String[2];
         attachFiles[0] = firstimagepath;
         attachFiles[1] = secondimagepath;
 
 
         //Send Mail
         JavaMailAPI javaMailAPI = new JavaMailAPI(this,mail,subject,message, attachFiles);
-
         javaMailAPI.execute();
         startActivity(intent);
-
-
     }
 
     @Override
@@ -177,12 +179,14 @@ public class carddetailspage extends AppCompatActivity {
                 if(status){
                     firstimg.setImageBitmap(bitmap);
                     firstimagepath = finalFile.toString();
+                    intentfstimg = targetUri;
                     bitmap = null;
                     status = Boolean.parseBoolean(null);
 
                 }else if(!status){
                     secondimg.setImageBitmap(bitmap);
                     secondimagepath = finalFile.toString();
+                    intentscdimg = targetUri;
                     bitmap = null;
                     status = Boolean.parseBoolean(null);
                 }

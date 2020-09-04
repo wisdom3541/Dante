@@ -22,8 +22,6 @@ public  class homepage extends Fragment {
     Intent intent1;
     String tag;
 
-
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
